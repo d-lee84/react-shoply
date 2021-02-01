@@ -7,8 +7,10 @@ function Shoply() {
   const [state, dispatch] = useReducer(
     rootReducer, {products: data.products, cart:{}}
   );
+
   return (
     <div className="Shoply">
+      <Cart cart={ state.cart }/>
       <ProductList products={state.products} />
     </div>
   );
